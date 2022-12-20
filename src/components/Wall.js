@@ -1,8 +1,12 @@
 import React from 'react'
 import Indivpost from './Indivpost'
-const Wall = () => {
+import s from "../styles/Wall.css"
+const Wall = ({posts}) => {
   return (
-    <div>Wall</div>
+    <div className='wall'>
+        {posts.map((post) => <Indivpost userid={post.userid} comment={post.content}/>)}
+    </div>
+
   )
 }
 

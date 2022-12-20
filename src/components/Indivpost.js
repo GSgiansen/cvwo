@@ -1,8 +1,9 @@
 import React from 'react'
+import s from "../styles/Indivpost.css"
 
-const Indivpost = ({userid,comment}) => {
+const Indivpost = ({userid,content}) => {
   return (
-    <div>Indivpost</div>
+    <div className='post'>{userid}</div>
   )
 }
 

@@ -2,3 +2,6 @@
     background-color:grey;
     height: 100vh;
 }
+.main-body{
+    display: flex;
+}

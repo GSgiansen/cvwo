@@ -1,7 +1,8 @@
-
 import './App.css';
 import Navbar from './components/Navbar';
 import Login from './components/Login';
+import Wall from './components/Wall';
+
 function App() {
   const posts=[
     {
@@ -30,6 +31,7 @@ function App() {
       <Navbar/>
       <header className="main-body">
         <Login/>
+        <Wall posts={posts}/>
       </header>
     </div>
   );
