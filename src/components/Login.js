@@ -3,16 +3,24 @@ import React from 'react'
 
 const Login = () => {
   return (
-    <div className='login'>
-        <div className="text">New to teapartea ? Sign up here!</div>
-        <form>
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="fname"></input>
-        <p></p>
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lname"></input>
-        </form>
+    <form className='login'>
+      New to TeaParTea ?
+    <div className='text-control'>
+      <label>Username</label>
+      <input
+        type='text'
+        placeholder='John Cena'
+      />
     </div>
+    <div className='text-control'>
+      <label>Password</label>
+      <input
+        type='text'
+      />
+    </div>
+
+    <input type='submit' value='Login/Register'/>
+    </form>
   )
 }
 

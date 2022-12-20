@@ -1,3 +1,21 @@
 .post{
     background-color: white;
+    margin: 10px;
+    font-family: 'Roboto Mono', monospace;
+    border-radius: 10px;
+}
+
+.userid{
+    padding: 5px;
+    color: rgb(67, 66, 66);
+    font-weight: bold;
+    font-size: 1.5rem;
+
+}
+
+.content{
+    padding: 5px;
+    text-align: start;
+    margin: auto;
+    overflow-wrap: break-word;
 }

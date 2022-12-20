@@ -4,7 +4,7 @@ import s from "../styles/Wall.css"
 const Wall = ({posts}) => {
   return (
     <div className='wall'>
-        {posts.map((post) => <Indivpost userid={post.userid} comment={post.content}/>)}
+        {posts.map((post) => <Indivpost userid={post.userid} content={post.content}/>)}
     </div>
 
   )

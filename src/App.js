@@ -6,19 +6,19 @@ import Wall from './components/Wall';
 function App() {
   const posts=[
     {
-      "userid":1,
-      "content":"happy wappy",
+      "userid":"John Cena",
+      "content":"happy wappy today oi had a v nice nburger nwejrhnd s2je 3ieri3h and i had coke",
 
 
     },
     {
-      "userid":2,
+      "userid":"Spongebob SquarePants",
       "content":"sadness",
 
 
     },
     {
-      "userid":3,
+      "userid":"Clowning",
       "content":"frustration",
 
 
