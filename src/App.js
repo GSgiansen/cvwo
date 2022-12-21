@@ -1,10 +1,12 @@
 import './App.css';
+import { useState } from 'react';
 import Navbar from './components/Navbar';
 import Login from './components/Login';
 import Wall from './components/Wall';
-
+import Newpost from './components/Newpost';
 function App() {
-  const posts=[
+  
+  const [posts,setPosts]=useState([
     {
       "userid":"John Cena",
       "content":"happy wappy today oi had a v nice nburger nwejrhnd s2je 3ieri3h and i had coke",
@@ -23,14 +25,18 @@ function App() {
 
 
     }
-  ]
+  ])
+  const addPost = () => {
+    console.log("wadio")
+
+  }
 
   
   return (
     <div className="App">
       <Navbar/>
       <header className="main-body">
-        <Login/>
+      <Newpost addPost={addPost}/>
         <Wall posts={posts}/>
       </header>
     </div>
