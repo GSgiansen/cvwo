@@ -5,7 +5,7 @@ import Newpost from './Newpost'
 const Wall = ({posts}) => {
   return (
     <div className='wall'>
-        s
+        
         {posts.map((post) => <Indivpost userid={post.userid} content={post.content}/>)}
     </div>
 

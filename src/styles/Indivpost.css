@@ -46,7 +46,7 @@ input[type=text] {
 
 .postbutton{
     margin: 5px;
-    background-color: blue;
+    background-color: rgb(64, 64, 243);
     color: white;
     border: none;
     border-radius: 5px;

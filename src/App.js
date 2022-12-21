@@ -24,10 +24,22 @@ function App() {
       "content":"frustration",
 
 
+    },
+    {
+      "userid":"Sherwin",
+      "content":"Playing pool right now",
+
+
+    },
+    {
+      "userid":"Amanda",
+      "content":"Having fun i the us",
+
+
     }
   ])
-  const addPost = () => {
-    console.log("wadio")
+  const addPost = ({userID,content}) => {
+    console.log({content})
 
   }
 

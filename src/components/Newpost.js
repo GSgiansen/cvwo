@@ -1,11 +1,13 @@
 import React from 'react'
 import s from "../styles/Indivpost.css"
-
+import { useState } from 'react'
 const Newpost = ({addPost}) => {
     const onPost = () =>{
-        addPost()
-        
+        addPost({userID,content})
+        setContent('')
     }
+    const [userID, setUserID] = useState('')
+    const [content, setContent] = useState('')
   return (
     <div className='newpost'>
         <form>
@@ -18,6 +20,8 @@ const Newpost = ({addPost}) => {
         className='prompt'
         type="text"
         placeholder='Whats the tea today babe ?'
+        value={content}
+        onChange={(e) => setContent(e.target.value)}
         />
         </form>
 
