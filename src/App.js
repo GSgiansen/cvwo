@@ -4,8 +4,9 @@ import Navbar from './components/Navbar';
 import Login from './components/Login';
 import Wall from './components/Wall';
 import Newpost from './components/Newpost';
+import Indivpost from './components/Indivpost';
 function App() {
-  
+  const testID="admin";
   const [posts,setPosts]=useState([
     {
       "userid":"John Cena",
@@ -38,8 +39,12 @@ function App() {
 
     }
   ])
-  const addPost = ({userID,content}) => {
-    console.log({content})
+
+  const addPost = ({userid,content}) => {
+    console.log(userid)
+    const newP={userid,content}
+    setPosts([...posts,newP])
+    console.log(posts)
 
   }
 
@@ -48,7 +53,7 @@ function App() {
     <div className="App">
       <Navbar/>
       <header className="main-body">
-      <Newpost addPost={addPost}/>
+      <Newpost addPost={addPost} testID={testID}/>
         <Wall posts={posts}/>
       </header>
     </div>

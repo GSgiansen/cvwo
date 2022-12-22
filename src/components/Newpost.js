@@ -1,12 +1,14 @@
 import React from 'react'
 import s from "../styles/Indivpost.css"
 import { useState } from 'react'
-const Newpost = ({addPost}) => {
+const Newpost = ({addPost,testID}) => {
+  
     const onPost = () =>{
-        addPost({userID,content})
+        addPost({userid,content})
+        setUserID(testID)
         setContent('')
     }
-    const [userID, setUserID] = useState('')
+    const [userid, setUserID] = useState(testID)
     const [content, setContent] = useState('')
   return (
     <div className='newpost'>
@@ -14,6 +16,8 @@ const Newpost = ({addPost}) => {
         <div className='postheader'>
         <div className='posttext'>Clam_Hunter is spilling...</div>
         <button className='postbutton' type="button" onClick={onPost}>Post!</button>
+
+              
 
         </div>
         <input 
