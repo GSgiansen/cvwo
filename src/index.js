@@ -10,7 +10,7 @@ import {
 
 import SignIn from "./pages/signin"
 import About from "./pages/about"
-
+import Profile from './pages/profile';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
   {
@@ -24,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <About/>,
+  },
+  {
+    path: "/profile",
+    element: <Profile/>,
   }
 
 ]);

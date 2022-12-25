@@ -1,27 +1,45 @@
-import s from "../styles/Login.css"
-import React from 'react'
-
+import s from "../styles/Login.css";
+import React from "react";
+import Logo from "./Logo";
+import { useState } from "react";
+import { NavLink, Link } from "react-router-dom";
+import App from "../App";
 const Login = () => {
+  const onLogin = () => {
+    setUserID("");
+  };
+  const [userID, setUserID] = useState("");
+
   return (
-    <form className='login'>
-      New to TeaParTea ?
-    <div className='text-control'>
-      <label>Username</label>
-      <input
-        type='text'
-        placeholder='John Cena'
-      />
-    </div>
-    <div className='text-control'>
-      <label>Password</label>
-      <input
-        type='text'
-      />
-    </div>
+    <>
+      <Logo className="logo" />
+      <form className="login">
+        <div className="loginheader">New to TeaParTea ?</div>
+        <div className="text-control">
+          <label>Username</label>
+          <input
+            type="text"
+            placeholder="John Cena"
+            value={userID}
+            onChange={(e) => setUserID(e.target.value)}
+          />
+        </div>
+        <div className="text-control">
+          <label>Password</label>
+          <input type="text" />
+        </div>
 
-    <input type='submit' value='Login/Register'/>
-    </form>
-  )
-}
+        <Link 
+        to={"/"}
+        state={userID}>
 
-export default Login
+          <button className="btn" type="button" onClick={onLogin}>
+            Login
+          </button>
+        </Link>
+      </form>
+    </>
+  );
+};
+
+export default Login;

@@ -14,7 +14,7 @@ const Newpost = ({addPost,testID}) => {
     <div className='newpost'>
         <form>
         <div className='postheader'>
-        <div className='posttext'>Clam_Hunter is spilling...</div>
+        <div className='posttext'>{testID} is spilling...</div>
         <button className='postbutton' type="button" onClick={onPost}>Post!</button>
 
               

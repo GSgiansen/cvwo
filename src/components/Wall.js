@@ -6,7 +6,7 @@ const Wall = ({posts}) => {
   return (
     <div className='wall'>
         
-        {posts.map((post) => <Indivpost userid={post.userid} content={post.content}/>)}
+        {posts.map((post) => <Indivpost key={post.userid} userid={post.userid} content={post.content}/>)}
     </div>
 
   )

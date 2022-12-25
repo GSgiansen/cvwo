@@ -12,6 +12,8 @@ import {
   Button,
   Input
 } from '@chakra-ui/react'
+import Logo from './Logo'
+import { NavLink,Link } from 'react-router-dom'
 function Sidebar() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
@@ -31,11 +33,12 @@ function Sidebar() {
         <DrawerOverlay/>
         <DrawerContent bg="black" color="white">
           <DrawerCloseButton />
-          <DrawerHeader fontSize="2rem">TeaPartea</DrawerHeader>
+          <DrawerHeader fontSize="2rem"><Logo/></DrawerHeader>
 
-          <DrawerBody >
-            <div className='sidebar'>Profile</div>
-            <div className='sidebar'>About</div>
+          <DrawerBody className='container'>
+            <Link to="/profile" className='sidebar'>Profile</Link>
+            <Link to="/about" className='sidebar'>About</Link>
+            <Link to="/signin" className='sidebar'>Sign In</Link>
           </DrawerBody>
 
           <DrawerFooter>

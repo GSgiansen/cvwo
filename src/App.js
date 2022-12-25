@@ -7,8 +7,11 @@ import Newpost from './components/Newpost';
 import Indivpost from './components/Indivpost';
 import { ChakraProvider } from '@chakra-ui/react'
 import { NavLink } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 function App() {
-  const testID="admin";
+  const {state}= useLocation();
+  console.log(state)
+  const testID=state
   const [posts,setPosts]=useState([
     {
       "userid":"John Cena",
@@ -52,7 +55,7 @@ function App() {
 
   
   return (
-    <ChakraProvider>
+
     <div className="App">
       <Navbar/>
       <header className="main-body">
@@ -60,7 +63,6 @@ function App() {
         <Wall posts={posts}/>
       </header>
     </div>
-    </ChakraProvider>
   );
 }
 

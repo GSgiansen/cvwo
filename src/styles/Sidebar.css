@@ -3,5 +3,11 @@
 }
 .sidebar{
     font-size: 2rem;
+    margin-top: 32px;
 
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
 }
