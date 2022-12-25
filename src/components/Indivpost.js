@@ -5,7 +5,7 @@ const Indivpost = ({userid,content}) => {
   return (
     
     <div className='post'>
-        <text className='userid'>{userid}</text>
+        <div className='userid'>{userid}</div>
         <p></p>
         <div className='content'>{content}</div>
     </div>
